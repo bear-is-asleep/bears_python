@@ -2,13 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-plt.rc('font', family='serif')
-plt.rc('xtick', labelsize='medium')
-plt.rc('ytick', labelsize='medium')
+from datetime import date
 
-xls = 14 #xy axis
-tls = 18 #Title
-lls = 14 #Legend 
+plt.style.use('presentation.mplstyle')
 
 #Organization
 def make_plot_dir():
