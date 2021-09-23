@@ -1,10 +1,9 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 import os
 from datetime import date
 
-plt.style.use('presentation.mplstyle')
+def use_science_style():
+  plt.style.use('science')
 
 #Organization
 def make_plot_dir():
