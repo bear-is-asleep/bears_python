@@ -8,6 +8,11 @@ def sum_combine(arr,every_other=2,col_options=[]):
   col_options: Enter column options 1D array same number of columns as arr.
                Set column to 0 for sum of column from i to i+every_other 
   """
+  
+  if arr.ndim == 1:
+    arr = np.reshape(arr,(arr.size,1))
+    #print (arr.shape)
+
   result = [] #Store result here
   extra_rows=[] #Store extra rows here
   if not col_options:
@@ -31,7 +36,7 @@ def sum_combine(arr,every_other=2,col_options=[]):
       result.append(row)
       extra_rows = []
     elif i == np.shape(arr)[0]-1:
-      print(i)
+      #print(i)
       extra_rows.append(line)
       return np.asarray(np.vstack((result,extra_rows))) #Returns extra rows
     else:
